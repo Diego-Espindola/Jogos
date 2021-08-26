@@ -8,7 +8,13 @@ def jogar():
 
     numero_tentativas = 0
 
-    erros = ''
+    letras_acertadas = nome_secreto
+
+    for c in range(0, len(random_nome)):
+        letras_acertadas[c] = '_'
+        
+    print(letras_acertadas)
+#    erros = ''
 
     while(numero_tentativas<10):
 
@@ -26,10 +32,10 @@ def jogar():
                     print(tentativa)
                 else:
                     print('|')
-        else: 
-            erros = erros + ' ' + tentativa
-            print('Você errou, tente novamente')
-            print(f'Seus chutes até o momento foram:\n{erros}')
+#       else: 
+#           erros = erros + ' ' + tentativa
+#           print('Você errou, tente novamente')
+#           print(f'Seus chutes até o momento foram:\n{erros}')
 
 
     print("Fim do jogo")
