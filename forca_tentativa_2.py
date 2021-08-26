@@ -3,7 +3,9 @@ def jogar():
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
 
-    nome_secreto = 'queijo'
+    random_nome = 'queijo'
+    nome_secreto = [random_nome]
+
     numero_tentativas = 0
 
     erros = ''
