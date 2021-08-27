@@ -3,7 +3,7 @@ def jogar():
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
 
-    random_nome = 'queijoo'
+    random_nome = 'strogonoff'
 
     nome_secreto = list(random_nome)
 
@@ -58,11 +58,10 @@ def jogar():
             print(f'Os erros até o momento foram = {erros.upper()}')
 
 
-             
             
 
 
-    print("Fim do jogo")
+    print("\nFim do jogo")
 
 if(__name__ == "__main__"):
     jogar()
