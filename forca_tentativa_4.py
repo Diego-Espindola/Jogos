@@ -2,29 +2,33 @@ def jogar():
     print("*********************************")
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
-
+    ###Vouu criar no futuro uma (interação com um banco de dados) maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
     random_nome = 'strogonoff'
 
-    nome_secreto = list(random_nome)
+    ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
+    letras_acertadas = list(random_nome)
 
     
-
-    letras_acertadas = nome_secreto
-
+    ###Essa lista deve passar de [s,t,r,o,g,o,n,o,f,f] para ['_','_','_','_','_','_','_','_','_','_']
+    ###For c(contador pra guardar o índice[]) --- no range de 0 ao total de letras da palavra sorteada
     for c in range(0, len(random_nome)):
+        ###a cada loop ele transforma um índice da lista(letras_acertadas) para '_'
         letras_acertadas[c] = '_'
-        
+    ###printando a lista transformada em string, o '' vai entrar no lugar da vírgula    
     print(' '.join(letras_acertadas))
 
-
+    ###variável para contar o total de loops
     numero_tentativas = 0
+    ###variável para guardar as letras incorretas e printar elas pro usuário
     erros = ''
+    ### iniciando um while de 0 a 9 (10 chances)
     while(numero_tentativas<10):
-
-        numero_tentativas = numero_tentativas + 1
+        ###iterando o numero de tentativas
+        numero_tentativas += 1
+        ###print da rodada atual
         print(f'{numero_tentativas}ª Tentativa')
 
-
+        ###input para guardar o chute do usuário[.lower(deixa todas letras minúsculas)][.strip(tira todos whitespaces antes, entre e depois)]
         tentativa = input('Informe uma letra:').lower().strip()
 
         ###variável para guardar o índice na hora de guardar uma letra acertada
