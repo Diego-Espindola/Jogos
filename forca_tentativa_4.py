@@ -10,17 +10,23 @@ def jogar():
 
     
     ###Essa lista deve passar de [s,t,r,o,g,o,n,o,f,f] para ['_','_','_','_','_','_','_','_','_','_']
+
+    ### vou criar um 
     ###For c(contador pra guardar o índice[]) --- no range de 0 ao total de letras da palavra sorteada
     for c in range(0, len(random_nome)):
+
         ###a cada loop ele transforma um índice da lista(letras_acertadas) para '_'
         letras_acertadas[c] = '_'
+
     ###printando a lista transformada em string, o '' vai entrar no lugar da vírgula    
     print(' '.join(letras_acertadas))
 
     ###variável para contar o total de loops
     numero_tentativas = 0
+
     ###variável para guardar as letras incorretas e printar elas pro usuário
     erros = ''
+
     ### iniciando um while de 0 a 9 (10 chances)
     while(numero_tentativas<10):
         ###iterando o numero de tentativas
