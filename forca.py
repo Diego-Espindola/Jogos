@@ -9,18 +9,21 @@ def jogar():
     print("2.Você pode chutar uma letra ou a palavra inteira")
     print("3.Ao final das tentativas você terá uma ultima chance de chutar a palavra inteira")
 
-    ###Vouu criar no futuro uma (interação com um banco de dados) maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
+    ###Interação com um banco de dados, maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
     random_nome = ImportarPalavra()
 
 
-    ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
-    letras_acertadas = list(random_nome)
+ #    ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
+ #    letras_acertadas = list(random_nome)
+ #
+ #    ###For para transformar a string em uma lista e muda a letra para '_'
+ #    for c in range(0, len(random_nome)):
+ #
+ #        letras_acertadas[c] = '_'
 
-    ###For para transformar a string em uma lista e muda a letra para '_'
-    for c in range(0, len(random_nome)):
-
-        letras_acertadas[c] = '_'
-        
+    ### Todo esse trabalho feito acima pode ser alterado para uma linha em python =
+    
+    letras_acertadas = ['_' for letra in random_nome]        
 
     print(' '.join(letras_acertadas))
 
