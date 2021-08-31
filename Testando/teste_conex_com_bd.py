@@ -1,10 +1,17 @@
 import mysql.connector
 
-con = mysql.connector.connect(host='localhost',database='Server_Forca',user='root',password='')
+con = mysql.connector.connect(host='localhost',database='baseforca',user='root',password='')
 
 if con.is_connected():
     db_info = con.get_server_info()
     print(' O banco está conectado, versão',db_info)
+
+    InteracaoTabela = con.cursor()
+    InteracaoTabela.execute("select palavra from palavraforca where(id=8);")
+
+    id = InteracaoTabela.fetchone()
+
+    print(id)
 
 #from mysql.connector import baseforca
 
