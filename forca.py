@@ -1,6 +1,6 @@
 def jogar():
 
-    from Python.Jogos.Testando.teste_conex_com_bd import ImportarPalavra
+    from Testando.teste_conex_com_bd import ImportarPalavra
     
     print("*********************************")
     print("***Bem vindo ao jogo da Forca!***")
@@ -12,7 +12,7 @@ def jogar():
     ###Vouu criar no futuro uma (interação com um banco de dados) maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
     random_nome = ImportarPalavra()
 
-    random_nome = ' '.join(random_nome)
+    random_nome = ''.join(random_nome)
     print(random_nome)
 
     ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
@@ -61,7 +61,7 @@ def jogar():
         for letra in random_nome:
 
             ###IF que verifica se a pessoa acertou alguma letra da palavra random 
-            if(tentativa == letra):
+            if(tentativa == (letra).lower().strip()):
 
                 ###Guarda a letra acertada no lugar correto dentro da lista
                 letras_acertadas[index] = letra
