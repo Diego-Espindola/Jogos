@@ -3,6 +3,7 @@ def jogar():
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
 
+
     random_nome = 'strogonoff'
 
     nome_secreto = list(random_nome)
