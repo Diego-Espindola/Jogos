@@ -1,10 +1,11 @@
-import pymysql.cursors
+import mysql.connector
 
-con = pymysql.connect(host='localhost',database='baseforca',user='root',password='')
+con = mysql.connector.connect(host='localhost',database='Server_Forca',user='root',password='')
 
-if con.is_connected():
-    db_info = con.get_server_info()
-    print(' O banco está conectado, versão',db_info)
+while True:
+    if con.is_connected():
+        db_info = con.get_server_info()
+        print(' O banco está conectado, versão',db_info)
 
 #from mysql.connector import baseforca
 
