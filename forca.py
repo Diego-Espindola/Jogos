@@ -1,4 +1,7 @@
 def jogar():
+
+    from Python.Jogos.Testando.teste_conex_com_bd import ImportarPalavra
+    
     print("*********************************")
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
@@ -7,7 +10,10 @@ def jogar():
     print("3.Ao final das tentativas você terá uma ultima chance de chutar a palavra inteira")
 
     ###Vouu criar no futuro uma (interação com um banco de dados) maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
-    random_nome = 'strogonoff'
+    random_nome = ImportarPalavra()
+
+    random_nome = ' '.join(random_nome)
+    print(random_nome)
 
     ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
     letras_acertadas = list(random_nome)
