@@ -21,27 +21,33 @@ def jogar():
     print(' '.join(letras_acertadas))
 
 
-    numero_tentativas = 0
+    numero_tentativas = 10
 
     erros = ''
 
-    while(numero_tentativas<10):
+    while(numero_tentativas>0):
 
-        numero_tentativas = numero_tentativas + 1
 
-        print(f'{numero_tentativas}ª Tentativa')
+        print(f'\n{numero_tentativas} tentativas restantes')
 
-        tentativa = input('Informe uma letra:').lower().strip()
+        tentativa = input('Informe uma letra: ').lower().strip()
 
         index = 0
 
         contagem_acerto = 0
 
-        ###If para caso a pessoa escreva a palavra inteira ao invés da letra
+        ###If para caso a pessoa escreva a palavra inteira BREAK
         if(tentativa==(random_nome.lower()).strip()):
             
-            print('Você acertou, a palavra era', random_nome)
+            print('\nVocê acertou, a palavra era', random_nome)
 
+            x=0
+
+            for letra in random_nome:
+
+                letras_acertadas[x] = letra
+
+                x += 1                
             break  
 
 
@@ -65,13 +71,16 @@ def jogar():
             ###guarda os erros cometidos para serem printados 
             erros = erros + ' ' + tentativa
 
+            ###Diminui uma tentativa pois a pessoa errou
+            numero_tentativas -= 1
+
             print('Você errou, tente novamente')
                        
         ###If para caso a pessoa acerte todas as letras          
         if((letras_acertadas.count('_')) == 0):
 
             ###O .join() serve pra transformar listas em strings
-            print('Você acertou, a palavra era', random_nome)
+            print('\nVocê acertou, a palavra era', random_nome)
 
             break  
 
@@ -83,7 +92,7 @@ def jogar():
 
             print(f'Os erros até o momento foram = {erros.upper()}')
 
-    ###If fora do laço while para caso a palavra ainda não tenha sido acertada
+    ###If fora do laço while para caso a palavra ainda não tenha sido acertada(ultima chance)
     if((letras_acertadas.count('_')) > 0):
 
 	    print('Você não conseguiu, essa é a sua chance de chutar a palavra')
@@ -95,7 +104,7 @@ def jogar():
 	    	print(f'\nParabéns, você acertou, a palavra é {random_nome}')
 	    else:
 
-	    	print(f'Você errou, a palavra era {random_nome}')
+	    	print(f'\nVocê errou, a palavra era {random_nome}')
 
             
 
