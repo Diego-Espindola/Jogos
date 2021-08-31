@@ -1,22 +1,31 @@
-import mysql.connector
+def ImportarPalavra():
+    import mysql.connector
+    import random
 
-con = mysql.connector.connect(host='localhost',database='baseforca',user='root',password='')
+    con = mysql.connector.connect(host='localhost',database='baseforca',user='root',password='')
 
-if con.is_connected():
-    db_info = con.get_server_info()
-    print(' O banco está conectado, versão',db_info)
+    if con.is_connected():
+        db_info = con.get_server_info()
+        print(' O banco está conectado, versão',db_info)
 
-    InteracaoTabela = con.cursor()
-    InteracaoTabela.execute("select palavra from palavraforca where(id=8);")
+        InteracaoTabela = con.cursor()
+        InteracaoTabela.execute("select palavra from palavraforca where(id=15);")
 
-    id = InteracaoTabela.fetchone()
+        id = InteracaoTabela.fetchone()
 
-    print(id)
+        id = ' '.join(id)
 
-#from mysql.connector import baseforca
+        letras_acertadas = list(id)
 
-#use baseforca
+        for c in range(0, len(id)):
 
-#palavra_Sorteada = SELECT palavra FROM palavraforca WHERE(id=random.randint(1,51));
+            letras_acertadas[c] = '_'
+        print(' '.join(letras_acertadas))
 
-#print(palavra_Sorteada)
+    #from mysql.connector import baseforca
+
+    #use baseforca
+
+    #palavra_Sorteada = SELECT palavra FROM palavraforca WHERE(id=random.randint(1,51));
+
+    #print(palavra_Sorteada)
