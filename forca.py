@@ -3,8 +3,11 @@ def jogar():
     from funcoes.tratando_palavra import tratar
 
     from funcoes.conex_com_bd import ImportarPalavra
+
+    print('')
+    random_nome = ImportarPalavra()
     
-    print("*********************************")
+    print("\n*********************************")
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
     print("Orientações: 1.Você tem 10 chances")
@@ -12,9 +15,8 @@ def jogar():
     print("3.Ao final das tentativas você terá uma ultima chance de chutar a palavra inteira")
 
     ###Interação com um banco de dados, maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
-    random_nome = 'Pão'#ImportarPalavra()
 
-    palavra_tratada = 'Pao'#tratar(random_nome)
+    palavra_tratada = tratar(random_nome)
 
  #    ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
  #    letras_acertadas = list(random_nome)

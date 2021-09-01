@@ -6,8 +6,9 @@ def ImportarPalavra():
 
 
     if con.is_connected():
-####    db_info = con.get_server_info()
-####    print(' O banco está conectado, versão',db_info)
+
+        #db_info = con.get_server_info()
+        print('O banco está conectado')#, versão',db_info)
 
         InteracaoTabela = con.cursor()
         InteracaoTabela.execute(f"select palavra from palavraforca where(id={random.randint(1,51)});")
@@ -15,6 +16,8 @@ def ImportarPalavra():
         id = InteracaoTabela.fetchone()
 
         id = ''.join(id)
+    else:
+        print('O banco de dados não está conectado')
 
 
     return id
