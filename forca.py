@@ -1,5 +1,7 @@
 def jogar():
 
+    from funcoes.tratando_palavra import tratar
+
     from funcoes.conex_com_bd import ImportarPalavra
     
     print("*********************************")
@@ -12,6 +14,7 @@ def jogar():
     ###Interação com um banco de dados, maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
     random_nome = ImportarPalavra()
 
+    palavra_tratada = 'Pão'#tratar(random_nome)
 
  #    ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
  #    letras_acertadas = list(random_nome)
@@ -36,14 +39,17 @@ def jogar():
 
         print(f'\n{numero_tentativas} tentativas restantes')
 
-        tentativa = input('Informe uma letra: ').lower().strip()
+        tentativa = input('Informe uma letra: ')
+
+        tentativa = tratar(tentativa)
+        print(tentativa)
 
         index = 0
 
         contagem_acerto = 0
 
         ###If para caso a pessoa escreva a palavra inteira BREAK
-        if(tentativa==(random_nome.lower()).strip()):
+        if(tentativa==palavra_tratada):
             
             print('\nVocê acertou, a palavra era', random_nome)
 
