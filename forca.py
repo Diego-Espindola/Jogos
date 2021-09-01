@@ -1,6 +1,6 @@
 def jogar():
 
-    from Testando.teste_conex_com_bd import ImportarPalavra
+    from funcoes.conex_com_bd import ImportarPalavra
     
     print("*********************************")
     print("***Bem vindo ao jogo da Forca!***")
