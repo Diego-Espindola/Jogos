@@ -12,9 +12,9 @@ def jogar():
     print("3.Ao final das tentativas você terá uma ultima chance de chutar a palavra inteira")
 
     ###Interação com um banco de dados, maneira de criar randomicamente a palavra, por isso o nome da variável é random_nome
-    random_nome = ImportarPalavra()
+    random_nome = 'Pão'#ImportarPalavra()
 
-    palavra_tratada = 'Pão'#tratar(random_nome)
+    palavra_tratada = 'Pao'#tratar(random_nome)
 
  #    ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
  #    letras_acertadas = list(random_nome)
@@ -42,7 +42,7 @@ def jogar():
         tentativa = input('Informe uma letra: ')
 
         tentativa = tratar(tentativa)
-        print(tentativa)
+
 
         index = 0
 
@@ -51,15 +51,7 @@ def jogar():
         ###If para caso a pessoa escreva a palavra inteira BREAK
         if(tentativa==palavra_tratada):
             
-            print('\nVocê acertou, a palavra era', random_nome)
-
-            x=0
-
-            for letra in random_nome:
-
-                letras_acertadas[x] = letra
-
-                x += 1                
+            print('\nVocê acertou, a palavra era', random_nome)             
             break  
 
 
@@ -67,7 +59,7 @@ def jogar():
         for letra in random_nome:
 
             ###IF que verifica se a pessoa acertou alguma letra da palavra random 
-            if(tentativa == (letra).lower().strip()):
+            if(tentativa == tratar(letra)):
 
                 ###Guarda a letra acertada no lugar correto dentro da lista
                 letras_acertadas[index] = letra
@@ -88,7 +80,7 @@ def jogar():
 
             print('Você errou, tente novamente')
                        
-        ###If para caso a pessoa acerte todas as letras          
+        ###If para caso a pessoa acerte todas as letras BREAK      
         if((letras_acertadas.count('_')) == 0):
 
             ###O .join() serve pra transformar listas em strings
@@ -109,9 +101,9 @@ def jogar():
 
 	    print('Você não conseguiu, essa é a sua chance de chutar a palavra')
 
-	    chute_final = (input('Digite seu chute: ').lower()).strip()
+	    chute_final = input('Digite seu chute: ')
 
-	    if(chute_final == random_nome):
+	    if(tratar(chute_final) == palavra_tratada):
 
 	    	print(f'\nParabéns, você acertou, a palavra é {random_nome}')
 	    else:
