@@ -27,7 +27,6 @@ def jogar():
 
     print(' '.join(letras_acertadas))
 
-
     numero_tentativas = 10
 
     erros = ''
