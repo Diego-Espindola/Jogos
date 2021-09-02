@@ -18,13 +18,15 @@ def jogar():
 
     palavra_tratada = tratar(random_nome)
 
- #    ###Transformei um string em uma lista e guardei isso na variável letras_acertadas
- #    letras_acertadas = list(random_nome)
- #
- #    ###For para transformar a string em uma lista e muda a letra para '_'
- #    for c in range(0, len(random_nome)):
- #
- #        letras_acertadas[c] = '_'
+    """
+    Transformei um string em uma lista e guardei isso na variável letras_acertadas
+    letras_acertadas = list(random_nome)
+ 
+    For para transformar a string em uma lista e muda a letra para '_'
+    for c in range(0, len(random_nome)):
+ 
+        letras_acertadas[c] = '_'      
+        """
 
     ### Todo esse trabalho feito acima pode ser alterado para uma linha em python =
     
