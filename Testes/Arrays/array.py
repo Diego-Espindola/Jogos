@@ -1,2 +1,2 @@
-import numpy
-print('A')
+import numpy as np
+
