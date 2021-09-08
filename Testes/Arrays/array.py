@@ -54,6 +54,14 @@ g = np.zeros(4)
 print('g: Array unidimensional de zeros\n', g)
 print()
 
+#array de números aleatórios
+h = np.random.rand(10)
+print('h: 10 números aleatórios entre 0 e 1')
+print()
+
+i = np.random.rand(3, 3)
+print('')
+
 
 
 
