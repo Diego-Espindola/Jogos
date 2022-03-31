@@ -19,14 +19,13 @@ def ImportarPalavra():
     else:
         print('O banco de dados não está conectado')
 
-
-    return id
-
     if con.is_connected():    
 
         InteracaoTabela.close()
 
         con.close()
+
+    return id
 
 
     #from mysql.connector import baseforca

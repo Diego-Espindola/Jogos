@@ -102,17 +102,18 @@ def jogar():
 
     ###If fora do laço while para caso a palavra ainda não tenha sido acertada(ultima chance)
     if((letras_acertadas.count('_')) > 0):
-
-	    print('Você não conseguiu, essa é a sua chance de chutar a palavra')
-
-	    chute_final = input('Digite seu chute: ')
-
-	    if(tratar(chute_final) == palavra_tratada):
-
-	    	print(f'\nParabéns, você acertou, a palavra é {random_nome}')
-	    else:
-
-	    	print(f'\nVocê errou, a palavra era {random_nome}')
+        
+        print('Você não conseguiu, essa é a sua chance de chutar a palavra')
+        
+        chute_final = input('Digite seu chute: ')
+        
+        if(tratar(chute_final) == palavra_tratada):
+            
+            print(f'\nParabéns, você acertou, a palavra é {random_nome}')
+        
+        else:
+            
+            print(f'\nVocê errou, a palavra era {random_nome}')
 
             
 
