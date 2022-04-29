@@ -1,7 +1,7 @@
 def ImportarPalavra():
     import mysql.connector
     import random
-    con = mysql.connector.connect(host='localhost',database='baseforca',user='root',password='')
+    con = mysql.connector.connect(host='localhost',database='projeto_dados',user='root',password='')
 
 
 
